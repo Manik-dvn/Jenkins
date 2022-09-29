@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<sub-flow name="implementation" doc:id="39d6a55e-d4f6-4d42-a4f6-0adfd1f4cd73" >
+		<logger level="INFO" doc:name="start flow" doc:id="18d122bf-e3b4-49a6-8242-a587e5d0151b" message="start flow"/>
+		<ee:transform doc:name="Implementation" doc:id="36818e79-518b-4589-9138-a16bf7be2d3e" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+  message: "Hello world"
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="end flow" doc:id="cd7edb23-413d-4715-b821-3069f77602ef" message="end flow"/>
+	</sub-flow>
+</mule>

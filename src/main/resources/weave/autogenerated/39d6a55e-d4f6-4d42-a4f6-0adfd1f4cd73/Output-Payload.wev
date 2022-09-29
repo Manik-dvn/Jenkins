@@ -1,0 +1,7 @@
+%dw 2.0
+
+type auto_39d6a55e_d4f6_4d42_a4f6_0adfd1f4cd73_Output_Payload = {
+  message?: String, 
+  _?: Any
+} {"label": "Hello world Response"}
+
